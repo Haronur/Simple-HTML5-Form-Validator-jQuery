@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Simple Validator Demo Page</title>
+  <link rel="stylesheet" href="jquery-simple-validator.css">
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/flatly/bootstrap.min.css">
+<script src="jquery.min.js"></script>
+<script src="jquery-simple-validator.min.js"></script>
+  <style>
+  body { background-color: #fafafa; font-family: 'Open Sans'; }
+  .container { margin: 150px auto; }
+  .error-field { margin: 10px 0; }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="offset-md-2 col-md-8">
+        <h1>jQuery Simple Validator Demo Page</h1>
+        <form validate="true">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input maxlength="10" minlength="3" type="password" class="form-control" id="exampleInputPassword1" 
+              required>
+          </div>
+          <div class="form-group">
+            <label for="exampleConfirmPassword1">Confirm Password</label>
+            <input type="password" class="form-control" id="exampleConfirmPassword1"  required data-match="password"
+              data-match-field="#exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="exampleNumber1">Age</label>
+            <input class="form-control" type="number" id="exampleNumber1" max="100" min="10">
+          </div>
+          <div class="form-group">
+            <label for="exampleTextarea1">Something about you</label>
+            <textarea maxlength="40" minlength="10" id="exampleTextarea1" class="form-control" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputSelect1">You are</label>
+            <select class="form-control" required>
+              <option value="">Select one</option>
+              <option value="Student">
+                Student
+              </option>
+              <option value="Working">
+                Working
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleURL1">Blog URL</label>
+            <input type="url" class="form-control" id="exampleURL1" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleMobile1">Mobile Number</label>
+            <input type="mobile" class="form-control" id="exampleMobile1" required>
+          </div>
+          <div class="form-group">
+            <label for="examplePattern1">3 letter Country code</label>
+            <input type="text" class="form-control" id="examplePattern1" required pattern="^[A-Za-z]{3}$">
+          </div>
+          <div class="form-group">
+            <label for="exampleFile1">Profile Picture</label>
+            <br>
+            <input type="file" data-file-types="image/jpeg,image/png" id="exampleFile1" data-file-max-size="100kb" data-file-min-size="50kb"
+              required>
+            <p>Choose a jpeg or png image with min size of 50kb and max size of 100 kb</p>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-inline">
+              <input type="checkbox" value="true" required> I agree to the terms and conditions
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
