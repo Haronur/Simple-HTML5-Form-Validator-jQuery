@@ -169,13 +169,6 @@ The file input field can be validated to have a minimum and a maximum file size 
 
 You can add the attribute **data-error** to any input fields to customize the error message
 
-## Running test
-
-I use **jest** for testing, to run tests
-
-```bash
-npm test
-```
 
 ## Roadmap
 
